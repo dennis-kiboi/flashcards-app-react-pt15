@@ -1,0 +1,656 @@
+{
+  "decks": [
+    {
+      "id": 1,
+      "title": "Data Structures & Algorithms",
+      "description": "Core concepts, algorithmic paradigms, and complexity analysis."
+    },
+    {
+      "id": 2,
+      "title": "Operating Systems",
+      "description": "Processes, concurrency, memory allocation, and kernel architectures."
+    },
+    {
+      "id": 3,
+      "title": "Computer Networks",
+      "description": "Protocols, OSI model, routing algorithms, and network security."
+    },
+    {
+      "id": 4,
+      "title": "Database Management Systems",
+      "description": "Relational algebra, SQL, indexing, transaction management, and ACID properties."
+    },
+    {
+      "id": 5,
+      "title": "Software Engineering & Design Patterns",
+      "description": "OOP principles, architectural patterns, and design patterns."
+    },
+    {
+      "id": 6,
+      "title": "Web Development & Web APIs",
+      "description": "HTTP fundamentals, RESTful APIs, state management, and modern web architectures."
+    },
+    {
+      "id": 7,
+      "title": "Cybersecurity & Cryptography",
+      "description": "Symmetric/Asymmetric encryption, threat vectors, authentication, and hash functions."
+    },
+    {
+      "id": 8,
+      "title": "Artificial Intelligence & ML",
+      "description": "Machine learning basics, neural networks, optimization, and search algorithms."
+    },
+    {
+      "id": 9,
+      "title": "Computer Architecture",
+      "description": "CPU pipelines, memory hierarchy, cache mechanisms, and instruction set architectures."
+    },
+    {
+      "id": 10,
+      "title": "Theory of Computation",
+      "description": "Automata, formal languages, Turing machines, and computability theory."
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "deckId": 1,
+      "question": "What is the average search time complexity in a Balanced BST?",
+      "answer": "O(log n)"
+    },
+    {
+      "id": 2,
+      "deckId": 1,
+      "question": "What is the primary difference between a Stack and a Queue?",
+      "answer": "Stack is LIFO (Last In, First Out); Queue is FIFO (First In, First Out)."
+    },
+    {
+      "id": 3,
+      "deckId": 1,
+      "question": "What is a Hash Collision?",
+      "answer": "When two distinct keys produce the exact same hash value."
+    },
+    {
+      "id": 4,
+      "deckId": 1,
+      "question": "What is the worst-case time complexity of QuickSort?",
+      "answer": "O(n^2), occurring when the pivot selection is poor (e.g., already sorted array with end pivot)."
+    },
+    {
+      "id": 5,
+      "deckId": 1,
+      "question": "What is the space complexity of Depth-First Search (DFS) on a tree of depth d?",
+      "answer": "O(d) for the call stack."
+    },
+    {
+      "id": 6,
+      "deckId": 1,
+      "question": "What data structure is typically used for Breadth-First Search (BFS)?",
+      "answer": "A Queue."
+    },
+    {
+      "id": 7,
+      "deckId": 1,
+      "question": "What is an Amortized Time Complexity?",
+      "answer": "The average time taken per operation over a sequence of operations."
+    },
+    {
+      "id": 8,
+      "deckId": 1,
+      "question": "What makes a dynamic array's push operation O(1) amortized?",
+      "answer": "Doubling array capacity when full distributes expensive reallocations across many insertions."
+    },
+    {
+      "id": 9,
+      "deckId": 1,
+      "question": "What is Dijkstra's algorithm used for?",
+      "answer": "Finding the shortest path from a starting node to all other nodes in a weighted graph with non-negative edges."
+    },
+    {
+      "id": 10,
+      "deckId": 1,
+      "question": "What is the worst-case time complexity of MergeSort?",
+      "answer": "O(n log n)."
+    },
+    {
+      "id": 11,
+      "deckId": 2,
+      "question": "What is the difference between a Process and a Thread?",
+      "answer": "Processes have separate memory address spaces; threads share memory within the same process."
+    },
+    {
+      "id": 12,
+      "deckId": 2,
+      "question": "What are the four necessary conditions for Deadlock?",
+      "answer": "Mutual Exclusion, Hold and Wait, No Preemption, and Circular Wait."
+    },
+    {
+      "id": 13,
+      "deckId": 2,
+      "question": "What is Virtual Memory?",
+      "answer": "A memory management technique that provides an idealized abstraction of storage resources using hardware and disk space."
+    },
+    {
+      "id": 14,
+      "deckId": 2,
+      "question": "What is a Context Switch?",
+      "answer": "The process of storing state of a CPU process/thread so execution can be resumed later."
+    },
+    {
+      "id": 15,
+      "deckId": 2,
+      "question": "What is the difference between Preemptive and Non-Preemptive Scheduling?",
+      "answer": "Preemptive scheduling can interrupt a running process; non-preemptive allows it to run to completion or wait state."
+    },
+    {
+      "id": 16,
+      "deckId": 2,
+      "question": "What is Thrashing in OS?",
+      "answer": "A state where the CPU spends more time swapping pages in and out than executing actual instructions."
+    },
+    {
+      "id": 17,
+      "deckId": 2,
+      "question": "What is a Semaphore?",
+      "answer": "A synchronization variable used to control access to a common resource by multiple processes."
+    },
+    {
+      "id": 18,
+      "deckId": 2,
+      "question": "What is a Page Fault?",
+      "answer": "An interrupt raised when a program accesses a page not currently mapped in physical RAM."
+    },
+    {
+      "id": 19,
+      "deckId": 2,
+      "question": "What is the purpose of the OS Kernel?",
+      "answer": "The core component that manages system resources, hardware interfaces, and process execution."
+    },
+    {
+      "id": 20,
+      "deckId": 2,
+      "question": "What is a Race Condition?",
+      "answer": "When the output of a system depends on the execution sequence or timing of controllable threads/processes."
+    },
+    {
+      "id": 21,
+      "deckId": 3,
+      "question": "At which OSI layer does the Internet Protocol (IP) operate?",
+      "answer": "Layer 3 (Network Layer)."
+    },
+    {
+      "id": 22,
+      "deckId": 3,
+      "question": "What is the main difference between TCP and UDP?",
+      "answer": "TCP is connection-oriented and reliable; UDP is connectionless and faster without delivery guarantees."
+    },
+    {
+      "id": 23,
+      "deckId": 3,
+      "question": "What is the function of the DNS protocol?",
+      "answer": "Resolves human-readable domain names (e.g., example.com) to IP addresses."
+    },
+    {
+      "id": 24,
+      "deckId": 3,
+      "question": "What does ARP stand for and what does it do?",
+      "answer": "Address Resolution Protocol; maps IP addresses to physical MAC addresses."
+    },
+    {
+      "id": 25,
+      "deckId": 3,
+      "question": "What is the 3-Way Handshake in TCP?",
+      "answer": "SYN, SYN-ACK, ACK sequence to establish a connection."
+    },
+    {
+      "id": 26,
+      "deckId": 3,
+      "question": "What port does HTTPS operate on by default?",
+      "answer": "Port 443."
+    },
+    {
+      "id": 27,
+      "deckId": 3,
+      "question": "What is the function of a Subnet Mask?",
+      "answer": "Separates the network address portion of an IP address from the host address portion."
+    },
+    {
+      "id": 28,
+      "deckId": 3,
+      "question": "What is NAT (Network Address Translation)?",
+      "answer": "Remaps one IP address space into another, usually mapping private IPs to a public IP."
+    },
+    {
+      "id": 29,
+      "deckId": 3,
+      "question": "What OSI layer is responsible for encryption and compression?",
+      "answer": "Layer 6 (Presentation Layer)."
+    },
+    {
+      "id": 30,
+      "deckId": 3,
+      "question": "What is BGP (Border Gateway Protocol)?",
+      "answer": "The protocol used to exchange routing information between autonomous systems on the Internet."
+    },
+    {
+      "id": 31,
+      "deckId": 4,
+      "question": "What does ACID stand for in databases?",
+      "answer": "Atomicity, Consistency, Isolation, Durability."
+    },
+    {
+      "id": 32,
+      "deckId": 4,
+      "question": "What is the difference between SQL and NoSQL databases?",
+      "answer": "SQL databases are relational and table-based; NoSQL databases are non-relational (document, key-value, graph, column-family)."
+    },
+    {
+      "id": 33,
+      "deckId": 4,
+      "question": "What is a Primary Key?",
+      "answer": "A column or set of columns that uniquely identifies each row in a database table."
+    },
+    {
+      "id": 34,
+      "deckId": 4,
+      "question": "What is Database Normalization?",
+      "answer": "Organizing database attributes to reduce data redundancy and improve data integrity."
+    },
+    {
+      "id": 35,
+      "deckId": 4,
+      "question": "What is a Foreign Key?",
+      "answer": "A field in one table that uniquely identifies a row in another table, enforcing referential integrity."
+    },
+    {
+      "id": 36,
+      "deckId": 4,
+      "question": "What is an Index in a database?",
+      "answer": "A data structure (often B-Tree) that speeds up data retrieval operations on a database table."
+    },
+    {
+      "id": 37,
+      "deckId": 4,
+      "question": "What is the difference between INNER JOIN and LEFT JOIN?",
+      "answer": "INNER JOIN returns matching rows only; LEFT JOIN returns all rows from the left table and matched rows from the right."
+    },
+    {
+      "id": 38,
+      "deckId": 4,
+      "question": "What is a Database Transaction?",
+      "answer": "A single logical unit of work that contains one or more SQL statements."
+    },
+    {
+      "id": 39,
+      "deckId": 4,
+      "question": "What is Database Sharding?",
+      "answer": "Horizontal partitioning of a database across multiple server instances."
+    },
+    {
+      "id": 40,
+      "deckId": 4,
+      "question": "What is the CAP Theorem?",
+      "answer": "States that a distributed data store can simultaneously provide at most two out of three guarantees: Consistency, Availability, Partition Tolerance."
+    },
+    {
+      "id": 41,
+      "deckId": 5,
+      "question": "What does SOLID stand for?",
+      "answer": "Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion."
+    },
+    {
+      "id": 42,
+      "deckId": 5,
+      "question": "What is the Singleton Design Pattern?",
+      "answer": "Ensures a class has only one instance and provides a global point of access to it."
+    },
+    {
+      "id": 43,
+      "deckId": 5,
+      "question": "What is the difference between Object Composition and Class Inheritance?",
+      "answer": "Composition ('has-a') dynamically combines objects; Inheritance ('is-a') statically inherits behavior."
+    },
+    {
+      "id": 44,
+      "deckId": 5,
+      "question": "What is the Factory Method Pattern?",
+      "answer": "Defines an interface for creating an object, but lets subclasses decide which class to instantiate."
+    },
+    {
+      "id": 45,
+      "deckId": 5,
+      "question": "What is the Observer Pattern?",
+      "answer": "A publish-subscribe pattern where dependent objects are notified automatically of state changes."
+    },
+    {
+      "id": 46,
+      "deckId": 5,
+      "question": "What is DRY in software design?",
+      "answer": "Don't Repeat Yourself - avoiding duplicate code and logic."
+    },
+    {
+      "id": 47,
+      "deckId": 5,
+      "question": "What is the Strategy Design Pattern?",
+      "answer": "Defines a family of algorithms, encapsulates each one, and makes them interchangeable at runtime."
+    },
+    {
+      "id": 48,
+      "deckId": 5,
+      "question": "What is Technical Debt?",
+      "answer": "The implied cost of additional rework caused by choosing an easy short-term solution over a better long-term approach."
+    },
+    {
+      "id": 49,
+      "deckId": 5,
+      "question": "What is Dependency Injection?",
+      "answer": "A technique where an object receives its dependencies from external sources rather than creating them directly."
+    },
+    {
+      "id": 50,
+      "deckId": 5,
+      "question": "What is continuous integration (CI)?",
+      "answer": "The practice of automatically building and testing code changes frequently into a central repository."
+    },
+    {
+      "id": 51,
+      "deckId": 6,
+      "question": "What is CORS (Cross-Origin Resource Sharing)?",
+      "answer": "A browser security mechanism that restricts HTTP requests made from scripts to a different origin."
+    },
+    {
+      "id": 52,
+      "deckId": 6,
+      "question": "What is the difference between HTTP GET and POST?",
+      "answer": "GET requests data without side effects; POST submits data to be processed causing side effects."
+    },
+    {
+      "id": 53,
+      "deckId": 6,
+      "question": "What is a JWT (JSON Web Token)?",
+      "answer": "A compact, URL-safe means of representing claims to be transferred securely between two parties."
+    },
+    {
+      "id": 54,
+      "deckId": 6,
+      "question": "What is the DOM (Document Object Model)?",
+      "answer": "A programming interface for web documents representing the structure as a tree of objects."
+    },
+    {
+      "id": 55,
+      "deckId": 6,
+      "question": "What is the difference between localStorage and sessionStorage?",
+      "answer": "localStorage persists until cleared; sessionStorage persists only for the current browser session tab."
+    },
+    {
+      "id": 56,
+      "deckId": 6,
+      "question": "What is a RESTful API?",
+      "answer": "An API architectural style using standard HTTP methods (GET, POST, PUT, DELETE) to manipulate resources."
+    },
+    {
+      "id": 57,
+      "deckId": 6,
+      "question": "What is GraphQL?",
+      "answer": "A query language for APIs that allows clients to request exactly the data they need."
+    },
+    {
+      "id": 58,
+      "deckId": 6,
+      "question": "What does HTTP Status Code 401 mean?",
+      "answer": "Unauthorized: authentication is required and has failed or has not been provided."
+    },
+    {
+      "id": 59,
+      "deckId": 6,
+      "question": "What is a Web Socket?",
+      "answer": "A protocol providing full-duplex communication channels over a single TCP connection."
+    },
+    {
+      "id": 60,
+      "deckId": 6,
+      "question": "What is SSR (Server-Side Rendering)?",
+      "answer": "Rendering web page content on the server side instead of rendering it in the client browser."
+    },
+    {
+      "id": 61,
+      "deckId": 7,
+      "question": "What is the primary difference between Symmetric and Asymmetric Encryption?",
+      "answer": "Symmetric uses one shared secret key; Asymmetric uses a public key and a private key pair."
+    },
+    {
+      "id": 62,
+      "deckId": 7,
+      "question": "What is a Man-in-the-Middle (MitM) attack?",
+      "answer": "An attack where the attacker secretly relays and possibly alters communication between two parties."
+    },
+    {
+      "id": 63,
+      "deckId": 7,
+      "question": "What is a Cryptographic Hash Function?",
+      "answer": "A one-way function that maps data of arbitrary size to a fixed-size bit array."
+    },
+    {
+      "id": 64,
+      "deckId": 7,
+      "question": "What is SQL Injection?",
+      "answer": "A code injection technique where malicious SQL statements are inserted into entry fields for execution."
+    },
+    {
+      "id": 65,
+      "deckId": 7,
+      "question": "What is XSS (Cross-Site Scripting)?",
+      "answer": "An attack where malicious scripts are injected into trusted websites visited by other users."
+    },
+    {
+      "id": 66,
+      "deckId": 7,
+      "question": "What is Zero Trust Architecture?",
+      "answer": "A security framework requiring strict identity verification for every user/device accessing resources."
+    },
+    {
+      "id": 67,
+      "deckId": 7,
+      "question": "What is Public Key Infrastructure (PKI)?",
+      "answer": "A framework of roles, policies, and hardware/software to create, manage, and revoke digital certificates."
+    },
+    {
+      "id": 68,
+      "deckId": 7,
+      "question": "What is a Salt in password hashing?",
+      "answer": "Random data added to input data before hashing to defend against dictionary/rainbow table attacks."
+    },
+    {
+      "id": 69,
+      "deckId": 7,
+      "question": "What is CSRF (Cross-Site Request Forgery)?",
+      "answer": "An attack that forces an end user to execute unwanted actions on a web application in which they are authenticated."
+    },
+    {
+      "id": 70,
+      "deckId": 7,
+      "question": "What is Diffie-Hellman Key Exchange?",
+      "answer": "A method of securely exchanging cryptographic keys over a public channel without prior shared secrets."
+    },
+    {
+      "id": 71,
+      "deckId": 8,
+      "question": "What is the difference between Supervised and Unsupervised Learning?",
+      "answer": "Supervised uses labeled training data; Unsupervised works on unlabeled data to find hidden patterns."
+    },
+    {
+      "id": 72,
+      "deckId": 8,
+      "question": "What is Overfitting in machine learning?",
+      "answer": "When a model learns training data noise too well, reducing its ability to generalize to unseen data."
+    },
+    {
+      "id": 73,
+      "deckId": 8,
+      "question": "What is a Neural Network Activation Function?",
+      "answer": "A function that introduces non-linearity into output nodes of a neural network layer."
+    },
+    {
+      "id": 74,
+      "deckId": 8,
+      "question": "What is Gradient Descent?",
+      "answer": "An optimization algorithm used to minimize loss functions by iteratively moving toward steepest descent."
+    },
+    {
+      "id": 75,
+      "deckId": 8,
+      "question": "What is the Difference between Classification and Regression?",
+      "answer": "Classification predicts discrete categories; Regression predicts continuous numerical values."
+    },
+    {
+      "id": 76,
+      "deckId": 8,
+      "question": "What is Precision vs. Recall?",
+      "answer": "Precision measures correct positive predictions; Recall measures true positives captured out of total actual positives."
+    },
+    {
+      "id": 77,
+      "deckId": 8,
+      "question": "What is an RNN (Recurrent Neural Network)?",
+      "answer": "A class of neural networks suitable for sequential/time-series data due to internal memory."
+    },
+    {
+      "id": 78,
+      "deckId": 8,
+      "question": "What is Transformer architecture in Deep Learning?",
+      "answer": "A deep learning model using self-attention mechanisms to process sequential data in parallel."
+    },
+    {
+      "id": 79,
+      "deckId": 8,
+      "question": "What is the Bias-Variance Tradeoff?",
+      "answer": "The tension between error from erroneous assumptions (bias) and sensitivity to training set fluctuations (variance)."
+    },
+    {
+      "id": 80,
+      "deckId": 8,
+      "question": "What is Reinforcement Learning?",
+      "answer": "A machine learning paradigm where an agent learns decision-making by taking actions to maximize cumulative rewards."
+    },
+    {
+      "id": 81,
+      "deckId": 9,
+      "question": "What is the von Neumann Architecture?",
+      "answer": "A computer design model featuring a processing unit, control unit, memory, and input/output mechanisms."
+    },
+    {
+      "id": 82,
+      "deckId": 9,
+      "question": "What is Instruction Pipelining?",
+      "answer": "A technique where multiple instructions are overlapped in execution across various CPU pipeline stages."
+    },
+    {
+      "id": 83,
+      "deckId": 9,
+      "question": "What is the difference between SRAM and DRAM?",
+      "answer": "SRAM is faster, volatile, and uses flip-flops; DRAM is slower, dynamic, cheaper, and uses capacitors requiring refresh."
+    },
+    {
+      "id": 84,
+      "deckId": 9,
+      "question": "What is Cache Memory?",
+      "answer": "High-speed SRAM located close to the CPU core to store frequently accessed data."
+    },
+    {
+      "id": 85,
+      "deckId": 9,
+      "question": "What is Spatial Locality vs Temporal Locality?",
+      "answer": "Spatial locality accesses nearby memory locations; Temporal locality accesses the same memory locations repeatedly."
+    },
+    {
+      "id": 86,
+      "deckId": 9,
+      "question": "What is an Instruction Set Architecture (ISA)?",
+      "answer": "An abstract model defining how software controls the CPU (e.g., x86, ARM, RISC-V)."
+    },
+    {
+      "id": 87,
+      "deckId": 9,
+      "question": "What is the difference between RISC and CISC?",
+      "answer": "RISC uses simple instructions taking 1 cycle; CISC uses complex instructions executing multi-step operations."
+    },
+    {
+      "id": 88,
+      "deckId": 9,
+      "question": "What is a Cache Miss?",
+      "answer": "An attempt to read/write data in cache that fails because the item is not present in cache memory."
+    },
+    {
+      "id": 89,
+      "deckId": 9,
+      "question": "What is DMA (Direct Memory Access)?",
+      "answer": "A feature allowing hardware subsystems to access main RAM independently of the CPU."
+    },
+    {
+      "id": 90,
+      "deckId": 9,
+      "question": "What is Clock Cycle Time?",
+      "answer": "The reciprocal of clock rate; the execution time period of one fundamental internal CPU operation."
+    },
+    {
+      "id": 91,
+      "deckId": 10,
+      "question": "What is a Deterministic Finite Automaton (DFA)?",
+      "answer": "A finite-state machine that accepts or rejects strings of symbols and produces one unique state transition for each symbol."
+    },
+    {
+      "id": 92,
+      "deckId": 10,
+      "question": "What is the Church-Turing Thesis?",
+      "answer": "States that any function computable by an algorithm can be computed by a Turing Machine."
+    },
+    {
+      "id": 93,
+      "deckId": 10,
+      "question": "What is a Context-Free Grammar (CFG)?",
+      "answer": "A set of recursive rewriting rules used to generate patterns of strings, commonly used in compilers."
+    },
+    {
+      "id": 94,
+      "deckId": 10,
+      "question": "What is the Halting Problem?",
+      "answer": "The problem of determining whether a program will finish running or run forever; proven to be undecidable."
+    },
+    {
+      "id": 95,
+      "deckId": 10,
+      "question": "What is P vs NP?",
+      "answer": "A major unsolved problem asking whether every problem whose solution can be quickly verified can also be quickly solved."
+    },
+    {
+      "id": 96,
+      "deckId": 10,
+      "question": "What makes a problem NP-Complete?",
+      "answer": "It is in NP and every other problem in NP can be reduced to it in polynomial time."
+    },
+    {
+      "id": 97,
+      "deckId": 10,
+      "question": "What is a Turing Machine?",
+      "answer": "A mathematical model of computation describing an abstract machine manipulating symbols on a strip of tape."
+    },
+    {
+      "id": 98,
+      "deckId": 10,
+      "question": "What is the Pumping Lemma?",
+      "answer": "A tool used to prove that a specific formal language is not regular or context-free."
+    },
+    {
+      "id": 99,
+      "deckId": 10,
+      "question": "What is a Regular Expression in theoretical CS?",
+      "answer": "A sequence of characters defining a search pattern for regular languages."
+    },
+    {
+      "id": 100,
+      "deckId": 10,
+      "question": "What is Decidability?",
+      "answer": "The property of a decision problem having an algorithm that halts with a correct Yes/No answer for all inputs."
+    }
+  ]
+}
