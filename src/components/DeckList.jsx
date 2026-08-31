@@ -1,15 +1,6 @@
-import { useEffect, useState } from "react";
 import DeckCard from "./DeckCard";
 
-const DeckList = () => {
-  const [decks, setDecks] = useState([]);
-
-  useEffect(() => {
-    fetch("http://127.0.0.1:3000/decks")
-      .then(res => res.json())
-      .then(data => setDecks(data));
-  }, []);
-
+const DeckList = ({ decks }) => {
   return (
     <section className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-semibold">Your Decks</h1>

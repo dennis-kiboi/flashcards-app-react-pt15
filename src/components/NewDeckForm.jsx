@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const NewDeckForm = ({ setIsFormSelected }) => {
+const NewDeckForm = ({ setIsFormSelected, setDecks }) => {
   const [deckTitle, setDeckTitle] = useState("");
   const [description, setDescription] = useState("");
 
@@ -22,18 +22,22 @@ const NewDeckForm = ({ setIsFormSelected }) => {
       })
     })
       .then(res => res.json())
-      .then(newDeck => console.log(newDeck));
+      .then(newDeck => setDecks(decks => [...decks, newDeck]));
+
+    setDeckTitle("");
+    setDescription("");
+    console.log("Last line was executed!!")
   }
 
   return (
     <section className="mx-auto max-w-2xl px-4 py-8 sm:px-6 lg:px-8">
-      <button
+      {/* <button
         className="mb-5 inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
         onClick={handleBackClick}
         type="button"
       >
         Back
-      </button>
+      </button> */}
 
       <div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-lg shadow-slate-200/70 sm:p-8">
         <p className="text-[10px] font-medium uppercase tracking-[0.25em] text-teal-700">
