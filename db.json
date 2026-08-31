@@ -49,16 +49,6 @@
       "id": 10,
       "title": "Theory of Computation",
       "description": "Automata, formal languages, Turing machines, and computability theory."
-    },
-    {
-      "title": "something",
-      "description": "sdfsdfsdfsd",
-      "id": 11
-    },
-    {
-      "title": "something else",
-      "description": "sdfsdfsdfsdfsd",
-      "id": 12
     }
   ],
   "cards": [
