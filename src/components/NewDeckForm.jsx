@@ -1,32 +1,14 @@
 import { useState } from "react";
 
-const NewDeckForm = ({ setIsFormSelected, setDecks }) => {
+const NewDeckForm = ({ onCreate }) => {
   const [deckTitle, setDeckTitle] = useState("");
   const [description, setDescription] = useState("");
 
-  function handleBackClick() {
-    setIsFormSelected(false);
-  }
-
   function handleSubmit(e) {
     e.preventDefault();
-
-    fetch("http://localhost:3000/decks", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        title: deckTitle,
-        description: description
-      })
-    })
-      .then(res => res.json())
-      .then(newDeck => setDecks(decks => [...decks, newDeck]));
-
+    onCreate({deckTitle, description}) 
     setDeckTitle("");
     setDescription("");
-    console.log("Last line was executed!!")
   }
 
   return (
