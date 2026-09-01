@@ -1,6 +1,11 @@
-const DeckCard = ({ deck }) => {
+const DeckCard = ({ deck, onDelete }) => {
+  function handleClick() {
+    console.log(`Card with id ${deck.id} has been clicked`);
+    onDelete(deck.id);
+  }
+
   return (
-    <div className="relative mx-auto h-64 w-full max-w-[17rem]">
+    <div className="relative mx-auto h-64 w-full max-w-68">
       <div className="absolute inset-x-4 top-4 h-full rounded-2xl border border-slate-200 bg-slate-100/80 shadow-sm" />
       <div className="absolute inset-x-2 top-2 h-full rounded-2xl border border-slate-200 bg-slate-200/70 shadow-sm" />
 
@@ -31,6 +36,7 @@ const DeckCard = ({ deck }) => {
             </button>
             <button
               type="button"
+              onClick={handleClick}
               className="rounded-full border border-rose-200 bg-rose-50 px-3 py-1.5 text-xs font-medium text-rose-700 transition hover:border-rose-300 hover:bg-rose-100"
             >
               Delete
