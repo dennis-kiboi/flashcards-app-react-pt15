@@ -1,6 +1,6 @@
 import UserAvatar from "../UserAvatar";
 
-const NavBar = ({ user }) => {
+const NavBar = () => {
   return (
     <nav className="border-b border-slate-200">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
@@ -12,7 +12,7 @@ const NavBar = ({ user }) => {
         >
           Add Deck
         </button> */}
-        <UserAvatar user={user} />
+        <UserAvatar />
       </div>
     </nav>
   );

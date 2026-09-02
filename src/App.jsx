@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import NavBar from "./components/common/NavBar";
 import DeckList from "./components/DeckList";
 import NewDeckForm from "./components/NewDeckForm";
+import { UserContext } from "./context/UserContext";
 
 const App = () => {
   const [decks, setDecks] = useState([]);
-  const user = {
+  const [user, setUser] = useState({
     name: "Amina Yusuf",
     avatarUrl: "/public/avatar.png"
-  };
+  });
 
   useEffect(() => {
     fetch("http://127.0.0.1:3000/decks")
@@ -40,18 +41,21 @@ const App = () => {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
-      <NavBar user={user} />
-      {/* {isFormSelected === false ? (
+    <UserContext value={user}>
+      <div className="min-h-screen bg-slate-50 text-slate-900">
+        <NavBar />
+
+        {/* {isFormSelected === false ? (
         <DeckList />
       ) : (
         <NewDeckForm setIsFormSelected={setIsFormSelected} />
       )} */}
-      <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <DeckList decks={decks} onDelete={handleDelete} />
-        <NewDeckForm onCreate={handleCreate} />
-      </main>
-    </div>
+        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <DeckList decks={decks} onDelete={handleDelete} />
+          <NewDeckForm onCreate={handleCreate} />
+        </main>
+      </div>
+    </UserContext>
   );
 };
 export default App;
