@@ -3,6 +3,8 @@ import NavBar from "./components/common/NavBar";
 import DeckList from "./components/DeckList";
 import NewDeckForm from "./components/NewDeckForm";
 import { UserContext } from "./context/UserContext";
+import { Route, Routes, useNavigate } from "react-router";
+import Layout from "./layouts/Layout";
 
 const App = () => {
   const [decks, setDecks] = useState([]);
@@ -10,6 +12,7 @@ const App = () => {
     name: "Amina Yusuf",
     avatarUrl: "/public/avatar.png"
   });
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("http://127.0.0.1:3000/decks")
@@ -26,7 +29,10 @@ const App = () => {
       body: JSON.stringify(formData)
     })
       .then(res => res.json())
-      .then(newDeck => setDecks(decks => [...decks, newDeck]));
+      .then(newDeck => {
+        setDecks(decks => [...decks, newDeck]);
+        navigate("/");
+      });
   }
 
   function handleDelete(id) {
@@ -42,19 +48,18 @@ const App = () => {
 
   return (
     <UserContext value={user}>
-      <div className="min-h-screen bg-slate-50 text-slate-900">
-        <NavBar />
-
-        {/* {isFormSelected === false ? (
-        <DeckList />
-      ) : (
-        <NewDeckForm setIsFormSelected={setIsFormSelected} />
-      )} */}
-        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <DeckList decks={decks} onDelete={handleDelete} />
-          <NewDeckForm onCreate={handleCreate} />
-        </main>
-      </div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route
+            index
+            element={<DeckList decks={decks} onDelete={handleDelete} />}
+          />
+          <Route
+            path="/decks/new"
+            element={<NewDeckForm onCreate={handleCreate} />}
+          />
+        </Route>
+      </Routes>
     </UserContext>
   );
 };

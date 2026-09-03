@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 const NewDeckForm = ({ onCreate }) => {
-  const [deckTitle, setDeckTitle] = useState("");
+  const [title, setDeckTitle] = useState("");
   const [description, setDescription] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    onCreate({deckTitle, description}) 
+    onCreate({title, description}) 
     setDeckTitle("");
     setDescription("");
   }
@@ -45,7 +45,7 @@ const NewDeckForm = ({ onCreate }) => {
               name="deck-title"
               id="deck-title"
               required
-              value={deckTitle}
+              value={title}
               onChange={e => setDeckTitle(e.target.value)}
               className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-800 outline-none transition focus:border-teal-400 focus:bg-white focus:ring-teal-200/80"
               placeholder="e.g. Spanish Vocabulary"
