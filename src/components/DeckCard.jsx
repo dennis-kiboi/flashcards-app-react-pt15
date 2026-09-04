@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const DeckCard = ({ deck, onDelete }) => {
   function handleClick() {
     console.log(`Card with id ${deck.id} has been clicked`);
@@ -15,7 +17,7 @@ const DeckCard = ({ deck, onDelete }) => {
             Deck
           </p>
           <h2 className="mt-3 text-xl font-semibold text-slate-800">
-            {deck.title}
+            <Link to={`/decks/${deck.id}`}>{deck.title}</Link>
           </h2>
           <p className="mt-2 text-sm leading-6 text-slate-600">
             {deck.description}
@@ -27,7 +29,7 @@ const DeckCard = ({ deck, onDelete }) => {
             Study
           </span>
 
-          <div className="flex items-center gap-2">
+          {/* <div className="flex items-center gap-2">
             <button
               type="button"
               className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-100"
@@ -41,7 +43,7 @@ const DeckCard = ({ deck, onDelete }) => {
             >
               Delete
             </button>
-          </div>
+          </div> */}
         </div>
       </article>
     </div>

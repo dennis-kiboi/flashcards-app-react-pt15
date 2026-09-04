@@ -5,6 +5,7 @@ import NewDeckForm from "./components/NewDeckForm";
 import { UserContext } from "./context/UserContext";
 import { Route, Routes, useNavigate } from "react-router";
 import Layout from "./layouts/Layout";
+import DeckDetails from "./pages/DeckDetails";
 
 const App = () => {
   const [decks, setDecks] = useState([]);
@@ -58,6 +59,7 @@ const App = () => {
             path="/decks/new"
             element={<NewDeckForm onCreate={handleCreate} />}
           />
+          <Route path="/decks/:id" element={<DeckDetails />} />
         </Route>
       </Routes>
     </UserContext>
